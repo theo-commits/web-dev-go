@@ -17,8 +17,8 @@ jobs:
         go get -u golang.org/x/lint/golint
     - name: Run vet & lint
       run: |
-        go vet .
-        golint .
+        go vet ./...
+        golint ./...
     - name: format go code
       run: go fmt .
 
