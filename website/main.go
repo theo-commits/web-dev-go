@@ -11,6 +11,8 @@ func handlerFunc(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "<h1>Welcome to my Website!</h1>")
 	} else if r.URL.Path == "/contact" {
 		fmt.Fprint(w, "To get into contact with me, please send an email to <a href=\"mailto:me@tlindsey.cloud\"> me@tlindsey.cloud</a>.")
+	} else {
+		fmt.Fprint(w, "<h1> We could not find the page you were looking for :(</h1> <p>Please email us if you cannot find your page</p>")
 	}
 
 }
